@@ -1,0 +1,538 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --PaleViolet: hsl(276, 100%, 81%);
+    --ModerateViolet: hsl(276, 55%, 52%);
+    --Desaturated: hsl(271, 15%, 43%);
+    --GrayishBlue: hsl(206, 6%, 79%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --DarkGrayishViolet: hsl(270, 7%, 64%);
+    --LightMagenta: hsl(293, 100%, 63%);
+    --LightViolet: hsl(264, 100%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 20%, 96%);
+    --VeryDarkDesaturatedViolet: hsl(271, 36%, 24%);
+    --VeryLightMagenta: hsl(289, 100%, 72%);
+
+
+}
+
+body {
+    font-size: 62.5%; /*resets the page font size*/
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#main {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+
+  /* This is to draw the objects behind the phone */
+.purple{
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    height: 495px;
+    width: 190px;
+    border-radius: 0  0 1000px 0px;
+    z-index: -1;
+}
+
+
+.gray{
+    background-color: var(--GrayishBlue);
+    position: absolute;
+    height: 495px;
+    width: 180px;
+    top: 495px;
+    border-radius: 1000px 0 0 0;
+    right: 0;
+    left: 55%;
+    z-index: -1;
+    opacity: 0.1;
+}
+/*END*/
+
+
+.chat{
+    position: relative;
+    border: 10px solid hsl(0, 0%, 100%);
+    background: hsl(270, 20%, 96%);
+    box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    width: 265px;
+    height: 530px;
+    left: 65px;
+    top: 65px; 
+}
+
+.chat__profile{
+    display: flex;
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 60px;
+   
+
+}
+.chat__profile::before{
+    content: "";
+    background: hsl(0, 0%, 100%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 18px;
+    width: 120px;
+    margin: 0 0%;
+    position: absolute;
+    left: 25%;
+    top: 0%;
+}
+
+.chat__profile img[src*="images/avatar.jpg"] {
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 100%);
+    width: 13%;
+    margin: 0%;
+}
+
+.chat__profile .status{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-flow: column wrap;
+    padding-top: 10%;
+    padding-left: 12%;
+    
+}
+
+
+/*PROFILE VERTICAL ELIPSIS*/
+
+.dots {
+   padding-top: 0.5rem;
+   padding-right: 1rem;
+}
+
+
+/* CREATE AND ARROW ICON FOR PROFILE VIEW */
+
+.status::before{
+    content: "";
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    width: 3px;
+    height: 6px;
+    background-color: #fff;
+    transform: skew(-28deg,0deg);
+}
+
+/* CREATE AND ARROW ICON FOR PROFILE VIEW */
+
+.status::after{
+    content: "";
+    position: absolute;
+    top: 7%;
+    left: 6%;
+    width: 3px;
+    height: 6px;
+    background-color: #fff;
+    transform: skew(28deg,0deg);
+}
+
+/*End*/
+
+
+/* CREATE A LINE BREAK  WITHIN ONE SENTENCE*/
+.status .info__status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    padding-right: 4rem;
+
+}
+
+.info__status h1 {
+    font-size: 1.3em;
+    color: var(--White);
+}
+
+.info__status p {
+    font-size: 1.1em;
+    color: var(--GrayishBlue);
+}
+
+
+.chat__box{
+    text-align: left;
+    background: var(--VeryLightMagenta);
+    height: 35px;
+    width: 145px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
+    margin: 4% 3%;
+    padding: 6px 5px;
+}
+
+
+
+/* THIS HELP ME CREATE THREE DOTS FOR CHAT SETTING */
+
+
+
+.para p{
+    font-size: 5px;
+    color: hsl(276, 55%, 52%);
+}
+
+.dogs__img{
+    display: flex;
+    justify-content: right;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    
+}
+
+.dogs__img img{
+    width: 20%;
+    padding: 0 1%;
+    border-radius: 10px;
+    margin-right: 2%;
+    margin-top: 1.5%;
+}
+
+
+.chat__box1{
+    text-align: left;
+    background: hsl(0, 0%, 100%);
+    height: 35px;
+    width: 145px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 5px;
+    margin: 4% 38%;
+    padding: 6px 5px;
+}
+
+
+.box2{
+   
+    height: 30px;
+    width: 90px;
+    margin: 4% 60%;
+    padding: 9px 5px;
+}
+
+.box3{
+    height: 55px;
+    width: 140px;
+}
+
+
+.offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    text-align: left;
+    background: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    height: 35px;
+    width: 165px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
+    margin: 4% 3%;
+}
+
+/* CREATE A CIRCLE CHAT MESSAGE */
+.circle::before{
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid hsl(0, 0%, 100%);
+    height: 2%;
+    width: 4%;
+    margin-top: 0px;
+    left: 5%;
+    opacity: 0.5;
+}
+
+.offer p{
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px
+}
+
+.offer .price{
+    font-weight: 700;
+    font-size: 1.4em;
+    padding-left: 30px;
+}
+
+.offer .price1{
+    padding-left: 45px;
+}
+
+.message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    height: 35px;
+    margin: 6% 3%;
+}
+
+.message .circle {
+    position: relative;
+    top: 0; left: 0;
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+    margin-top: 0.2rem;
+}
+
+.message .circle i {
+    color: var(--VeryDarkDesaturatedViolet);
+}
+
+.angle_arrow {
+    position: absolute;
+    top: 0.25rem;
+    left: .4rem;
+    font-size: 1rem;
+}
+
+.message h4{
+    color: hsl(270, 7%, 64%);
+    font-size: 12px;
+    padding: 10px 10px;
+}
+
+/*Animation*/
+.message h4:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 1.5rem;
+    left: "";
+    overflow: hidden;
+    animation: type 8s steps(41) both;
+    white-space: nowrap;
+}
+
+
+@keyframes type {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+
+.article{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    padding: 8rem 0rem;
+}
+
+.article h2{
+    font-size: 2.5rem;
+    color: hsl(271, 36%, 24%);
+   
+}
+
+.article p{
+    text-align: center;
+    font-size: 1.5em;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.5;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+@media (min-width: 740px) {
+
+    body {
+        overflow-y: "hidden";
+    }
+    .gray{
+    height: 700px;
+    top: 120px;
+    left: 82%;
+}
+
+
+.article{
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    bottom: 220px;
+    left: 4rem;
+    z-index: 10;
+    padding: 0rem 0rem;
+}
+
+.article h2{
+    font-size: 2.5rem;
+    color: hsl(271, 36%, 24%);
+   
+}
+
+.article p{
+    text-align: left;
+    font-size: 1.5em;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.8;
+    padding-top: 25px;
+    padding-left: 360px;
+    padding-right: 200px;
+}
+
+
+}
+
+
+/*Desktop view*/
+@media (min-width: 1240px) {
+    /* This is to draw the objects behind the phone */
+.purple{
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    position: absolute;
+    top: 0%;
+    left: 120px;
+    height: 700px;
+    width: 300px;
+    border-radius: 0  0 1000px 0px;
+}
+
+.purple::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 300px;
+    background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(264, 100%, 63%));
+    height: 700px;
+    width: 300px;
+    border-radius: 0  0 0px 1000px;
+    margin-left: 0px;
+}
+
+.gray{
+    background-color: var(--GrayishBlue);
+    position: absolute;
+    height: 700px;
+    width: 300px;
+    top: 120px;
+    border-radius: 1000px 0 0 0;
+    right: 0;
+    left: 83%;
+    z-index: -1;
+    opacity: 0.1;
+}
+/*END*/
+
+
+.chat{
+    position: relative;
+    border: 10px solid hsl(0, 0%, 100%);
+    background: hsl(270, 20%, 96%);
+    box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    width: 265px;
+    height: 530px;
+    left: 350px;
+    top: 150px; 
+}
+
+
+.info__status h1 {
+    font-size: 12px;
+    color: var(--White);
+}
+
+.info__status p {
+    font-size: 10px;
+    color: var(--GrayishBlue);
+}
+
+
+.offer .price{
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 30px;
+}
+
+.offer .price1{
+    padding-left: 50px;
+}
+
+
+
+
+.article{
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    bottom: 220px;
+    left: 13rem;
+    z-index: 10;
+    padding: 0rem 0rem;
+}
+
+.article h2{
+    font-size: 2.5rem;
+    color: hsl(271, 36%, 24%);
+   
+}
+
+.article p{
+    text-align: left;
+    font-size: 1.5em;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.8;
+    padding-top: 25px;
+    padding-left: 530px;
+    padding-right: 400px;
+}
+
+}
+
+
+
+
+
+
